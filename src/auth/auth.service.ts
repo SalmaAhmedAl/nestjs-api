@@ -63,6 +63,7 @@ export class AuthService{
             throw new ForbiddenException(
               'Credentials incorrect',
             );
+        delete user.hash;
           return user;
         }
 
